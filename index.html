@@ -6,127 +6,263 @@
     <link rel="stylesheet" href="css/output.css" />
     <title>TailwindCSS Project</title>
   </head>
-  <body class="p-6">
-    <!-- <div class="bg-auto bg-landing-top"> -->
-    <!-- nav bar -->
-    <nav>
-      <div class="flex items-center justify-between pb-12">
-        <!-- logo -->
-        <div class="pt-2">
-          <img src="/public/img/logo.svg" />
+  <body>
+    <div class="p-6">
+      <!-- <div class="bg-auto bg-landing-top"> -->
+      <!-- nav bar -->
+      <nav>
+        <div class="flex items-center justify-between pb-12">
+          <!-- logo -->
+          <div class="pt-2">
+            <img src="/public/img/logo.svg" />
+          </div>
+
+          <!-- links -->
+          <div class="hidden md:flex space-x-4">
+            <a href="/" class="text-black hover:text-red-700">Pricing</a>
+            <a href="/" class="text-black hover:text-red-700">Product</a>
+            <a href="/" class="text-black hover:text-red-700">About us</a>
+            <a href="/" class="text-black hover:text-red-700">Careers</a>
+            <a href="/" class="text-black hover:text-red-700">Community</a>
+          </div>
+
+          <!-- button -->
+          <a
+            href="/"
+            class="hidden md:flex hover:bg-red-700 px-6 py-3 bg-red-400 text-white rounded-full"
+            >Get Started</a
+          >
+
+          <button id="hamb-btn">
+            <img src="/public/img/icon-hamburger.svg" class="block md:hidden" />
+          </button>
         </div>
 
-        <!-- links -->
-        <div class="hidden md:flex space-x-4">
+        <div
+          id="hamb-links-section"
+          class="hidden md:hidden flex flex-col items-center"
+        >
           <a href="/" class="text-black hover:text-red-700">Pricing</a>
           <a href="/" class="text-black hover:text-red-700">Product</a>
           <a href="/" class="text-black hover:text-red-700">About us</a>
           <a href="/" class="text-black hover:text-red-700">Careers</a>
           <a href="/" class="text-black hover:text-red-700">Community</a>
         </div>
+      </nav>
 
-        <!-- button -->
+      <!-- top section -->
+      <section
+        class="flex flex-col-reverse md:flex-row items-center md:items-start mb-32"
+      >
+        <!-- text -->
+        <div
+          class="flex flex-col space-y-10 flex-1 mr-0 md:mr-8 items-center md:items-start"
+        >
+          <h1 class="text-4xl text-justify font-extrabold">
+            Bring everyone together to build better products.
+          </h1>
+
+          <p class="text-sm text-center md:text-start">
+            Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view.
+          </p>
+
+          <div class="flex justify-center md:justify-start">
+            <a
+              href="/"
+              class="hover:bg-red-700 px-6 py-3 bg-red-400 text-white rounded-full"
+              >Get Started</a
+            >
+          </div>
+        </div>
+
+        <!-- image -->
+        <div class="pb-8 md:pb-0 flex-1">
+          <img src="/public/img/illustration-intro.svg" />
+        </div>
+      </section>
+
+      <!-- Features section -->
+      <section
+        class="flex flex-col md:flex-row space-x-0 md:space-x-12 items-center md:items-start mb-32"
+      >
+        <div
+          class="flex flex-col flex-1 mr-0 md:mr-8 space-y-8 mb-8 md:mb-0 items-center md:items-start"
+        >
+          <h1 class="text-4xl text-justify font-extrabold">
+            What's different about Manage?
+          </h1>
+
+          <p class="text-sm text-center md:text-start">
+            Manage provides all the functionality your team needs, without the
+            complexity. Our software is tailormade for modern digital product
+            teams.
+          </p>
+        </div>
+
+        <div class="flex flex-col flex-1 space-y-4">
+          <div class="flex flex-row items-start">
+            <p class="px-3 py-1 bg-red-400 text-white rounded-full">01</p>
+            <div class="space-y-4">
+              <h2 class="text-2xl bg-red-100 md:bg-transparent pl-4">
+                Track company-wide progress
+              </h2>
+
+              <p class="text-sm pl-4">
+                See how your day-to-day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way down to the
+                smallest of details. Never lose sight of the bigger picture
+                again.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-start">
+            <p class="px-3 py-1 bg-red-400 text-white rounded-full">02</p>
+            <div class="space-y-4">
+              <h2 class="text-2xl bg-red-100 md:bg-transparent pl-4">
+                Advanced built-in reports
+              </h2>
+
+              <p class="text-sm pl-4">
+                Set internal delivery estimates and track progress toward
+                company goals. Our customisable dashboard helps you build out
+                the reports you need to keep key stakeholders informed.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-start">
+            <p class="px-3 py-1 bg-red-400 text-white rounded-full">03</p>
+            <div class="space-y-4">
+              <h2 class="text-2xl bg-red-100 md:bg-transparent pl-4">
+                Everything you need in one place
+              </h2>
+
+              <p class="text-sm pl-4">
+                Stop jumping from one service to another to communicate, store
+                files, track tasks and share documents. Manage offers an
+                all-in-one team productivity solution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- people section -->
+      <section>
+        <div class="flex flex-col items-center">
+          <h1
+            class="text-4xl text-justify font-extrabold max-w-md md:max-w-xl mb-8"
+          >
+            What's different about Manage?
+          </h1>
+
+          <div
+            class="flex self-center md:self-stretch flex-col md:flex-row justify-between"
+          >
+            <div class="flex flex-col flex-1 items-center p-8">
+              <img src="/public/img/avatar-anisha.png" />
+              <h3 class="my-4 font-bold">Anish Li</h3>
+              <p class="text-center text-sm max-w-md">
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+
+            <div class="flex flex-col flex-1 items-center p-8">
+              <img src="/public/img/avatar-ali.png" />
+              <h3 class="my-4 font-bold">Ali Bravo</h3>
+              <p class="text-center text-sm max-w-md">
+                “We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.”
+              </p>
+            </div>
+
+            <div class="flex flex-col flex-1 items-center p-8 my-8 md:my-0">
+              <img src="/public/img/avatar-richard.png" />
+              <h3 class="my-4 font-bold">Richard Watts</h3>
+              <p class="text-center text-sm max-w-md">
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CTA section -->
+    <section>
+      <div
+        class="bg-red-400 flex flex-col items-center justify-around px-auto py-12 md:flex-row"
+      >
+        <h1 class="text-3xl max-w-md text-white font-bold">
+          Simplify how your team works today.
+        </h1>
+
         <a
           href="/"
-          class="hidden md:flex hover:bg-red-700 px-6 py-3 bg-red-400 text-white rounded-full"
+          class="hover:bg-red-700 hover:text-white px-6 py-3 bg-white text-red-400 rounded-full"
           >Get Started</a
         >
-
-        <p class="flex md:hidden">Hamb Icon</p>
-      </div>
-    </nav>
-
-    <!-- top section -->
-    <section
-      class="flex flex-col-reverse md:flex-row items-center md:items-start mb-32"
-    >
-      <!-- text -->
-      <div
-        class="flex flex-col space-y-10 flex-1 mr-0 md:mr-8 items-center md:items-start"
-      >
-        <h1 class="text-4xl text-justify font-extrabold max-w-md">
-          Bring everyone together to build better products.
-        </h1>
-
-        <p class="text-sm text-center md:text-start">
-          Manage makes it simple for software teams to plan day-to-day tasks
-          while keeping the larger team goals in view.
-        </p>
-
-        <div class="flex justify-center md:justify-start">
-          <a
-            href="/"
-            class="hover:bg-red-700 px-6 py-3 bg-red-400 text-white rounded-full"
-            >Get Started</a
-          >
-        </div>
-      </div>
-
-      <!-- image -->
-      <div class="pb-8 md:pb-0 flex-1">
-        <img src="/public/img/illustration-intro.svg" />
-      </div>
-    </section>
-
-    <!-- Features section -->
-    <section
-      class="flex flex-col md:flex-row space-x-12 items-center md:items-start"
-    >
-      <div
-        class="flex flex-col flex-1 mr-0 md:mr-8 space-y-8 mb-8 md:mb-0 items-center md:items-start"
-      >
-        <h1 class="text-4xl text-justify font-extrabold max-w-md">
-          What's different about Manage?
-        </h1>
-
-        <p class="text-sm text-center md:text-start">
-          Manage provides all the functionality your team needs, without the
-          complexity. Our software is tailormade for modern digital product
-          teams.
-        </p>
-      </div>
-
-      <div class="flex flex-col flex-1 space-y-8">
-        <div class="flex flex-row items-start space-x-4">
-          <p class="px-3 py-1 bg-red-400 text-white rounded-full">01</p>
-          <div class="space-y-4">
-            <h2 class="text-2xl">Track company-wide progress</h2>
-
-            <p class="text-sm">
-              See how your day-to-day tasks fit into the wider vision. Go from
-              tracking progress at the milestone level all the way down to the
-              smallest of details. Never lose sight of the bigger picture again.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-row items-start space-x-4">
-          <p class="px-3 py-1 bg-red-400 text-white rounded-full">02</p>
-          <div class="space-y-4">
-            <h2 class="text-2xl">Advanced built-in reports</h2>
-
-            <p class="text-sm">
-              Set internal delivery estimates and track progress toward company
-              goals. Our customisable dashboard helps you build out the reports
-              you need to keep key stakeholders informed.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-row items-start space-x-4">
-          <p class="px-3 py-1 bg-red-400 text-white rounded-full">03</p>
-          <div class="space-y-4">
-            <h2 class="text-2xl">Everything you need in one place</h2>
-
-            <p class="text-sm">
-              Stop jumping from one service to another to communicate, store
-              files, track tasks and share documents. Manage offers an
-              all-in-one team productivity solution.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
     <!-- </div> -->
+
+    <!-- Footer section -->
+    <footer
+      class="bg-black flex flex-col-reverse justify-around py-8 items-center md:items-start md:flex-row"
+    >
+      <div class="hidden md:flex">
+        <img src="/public/img/logo-white.svg" />
+      </div>
+
+      <div class="flex flex-row space-x-8">
+        <div class="flex flex-col space-y-2">
+          <a href="/" class="text-white text-sm">Home</a>
+          <a href="/" class="text-white text-sm">Pricing</a>
+          <a href="/" class="text-white text-sm">Products</a>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <a href="/" class="text-white text-sm">Careers</a>
+          <a href="/" class="text-white text-sm">Community</a>
+          <a href="/" class="text-white text-sm">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4 mb-8">
+        <input
+          placeholder="updates in your inbox"
+          type="email"
+          class="h-12 rounded-full text-center"
+        />
+        <a
+          href="/"
+          class="hover:bg-red-700 px-6 py-3 bg-red-400 text-white rounded-full"
+          >Go</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      function hambBtnClickHandler() {
+        const hambLinksSection = document.getElementById("hamb-links-section");
+        const currentClass = hambLinksSection.classList.contains("hidden")
+          ? "hidden"
+          : "block";
+        const toBeAddedClass = currentClass === "hidden" ? "block" : "hidden";
+
+        hambLinksSection.classList.remove(currentClass);
+        hambLinksSection.classList.add(toBeAddedClass);
+      }
+
+      document
+        .getElementById("hamb-btn")
+        .addEventListener("click", hambBtnClickHandler);
+    </script>
   </body>
 </html>
